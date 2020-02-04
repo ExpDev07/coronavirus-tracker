@@ -1,7 +1,6 @@
 # coronavirus-tracker
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+> 🦠 A live tracker and visualization of the coronavirus (2019-nCoV). Consists purely of a frontend written in EmberJS.
 
 ## Prerequisites
 
@@ -14,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/ExpDev07/coronavirus-tracker.git`
 * `cd coronavirus-tracker`
 * `npm install`
 
