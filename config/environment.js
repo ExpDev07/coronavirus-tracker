@@ -44,8 +44,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // GitHub pages root url.
+    // GitHub pages root url and use hash for routing.
     ENV.rootURL = 'coronavirus-tracker/';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
