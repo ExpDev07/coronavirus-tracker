@@ -16,7 +16,7 @@
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test",
-    "deploy": "npm run build -prod && git add . && git commit -m \"Deploying to gh-pages!\" && git push -u && git subtree push --prefix dist origin gh-pages"
+    "deploy": "ember build --prod && git add . && git commit -m \"Deploying to gh-pages!\" && git push -u && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.1.0",
