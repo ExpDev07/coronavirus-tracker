@@ -44,7 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    // GitHub pages root url.
+    ENV.rootURL = 'coronavirus-tracker/';
   }
 
   return ENV;
