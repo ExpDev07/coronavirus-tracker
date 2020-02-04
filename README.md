@@ -45,7 +45,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Deploying to GitHub pages.
+* `git subtree push --prefix dist origin gh-pages`
 
 ## Further Reading / Useful Links
 
