@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   let ENV = {
+    environment: environment,
     modulePrefix: 'coronavirus-tracker',
-    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -45,7 +45,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // GitHub pages root url and use hash for routing.
-    ENV.rootURL = 'coronavirus-tracker/';
+    ENV.rootURL = ENV.modulePrefix + '/';
     ENV.locationType = 'hash';
   }
 
