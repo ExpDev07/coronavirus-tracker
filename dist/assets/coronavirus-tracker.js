@@ -447,7 +447,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("coronavirus-tracker/app")["default"].create({"name":"coronavirus-tracker","version":"0.0.0+91698e00"});
+            require("coronavirus-tracker/app")["default"].create({"name":"coronavirus-tracker","version":"0.0.0+74ffdbb7"});
           }
         
 //# sourceMappingURL=coronavirus-tracker.map
