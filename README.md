@@ -45,8 +45,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Deploying to GitHub pages.
-* `git subtree push --prefix dist origin gh-pages`
+The project is setup to automatically deploy to your GitHub pages, just run:
+* `npm run deploy`
 
 ## Further Reading / Useful Links
 
