@@ -22,11 +22,25 @@ body {
   color: rgb(194, 193, 187);
 }
 
+header {
+  font-size: 1.15em;
+  background-color: rgb(17, 18, 19);
+  padding: 2.5em 0;
+}
+
+main {
+  padding: 0.5em 0;
+}
+
+section {
+  margin: 3em 0;
+}
+
 blockquote, code, pre {
   margin: 1em 0;
   padding: 0 1em;
   color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
+  border-left: 0.25em solid #00BCF2;
 }
 
 .container {
