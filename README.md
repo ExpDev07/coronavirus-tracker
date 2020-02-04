@@ -47,6 +47,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 The project is setup to automatically deploy to your GitHub pages, just run:
 * `npm run deploy`
+* ... then make sure to go into settings and enable GitHub pages to point to the `gh-pages` branch.
 
 ## Further Reading / Useful Links
 
