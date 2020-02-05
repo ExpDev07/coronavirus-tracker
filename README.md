@@ -1,8 +1,8 @@
 # coronavirus-tracker
 
-[![Build Status](https://travis-ci.com/ExpDev07/coronavirus-tracker.svg?branch=master)](https://travis-ci.com/ExpDev07/coronavirus-tracker)
-
 > 🦠 A live tracker and visualization of the coronavirus (2019-nCoV). Consists purely of a frontend written in EmberJS.
+
+[![Build Status](https://travis-ci.com/ExpDev07/coronavirus-tracker.svg?branch=master)](https://travis-ci.com/ExpDev07/coronavirus-tracker)
 
 ## Live version
 View the live version here: [https://expdev07.github.io/coronavirus-tracker](https://expdev07.github.io/coronavirus-tracker).
