@@ -1,0 +1,49 @@
+@import 'layout';
+@import 'map';
+
+// Bootstrap 4 and overriding variables.
+@import 'variables';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: #262829 #191b1c;
+}
+
+html, body {
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  /* body typography */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  font-size: 1.15em;
+  background-color: rgb(17, 18, 19);
+
+  > div { min-height: 45vh; }
+}
+
+main {
+  padding: 0.5em 0;
+}
+
+footer {
+  background-color: rgb(17, 18, 19);
+}
+
+section {
+  margin: 3em 0;
+}
+
+blockquote, code, pre {
+  margin: 1em 0;
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid $blue;
+}
+

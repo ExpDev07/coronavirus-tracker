@@ -1,0 +1,8 @@
+.map {
+  width: 100%;
+  height: 500px;
+
+  &-layer {
+    filter: grayscale(100%);
+  }
+}

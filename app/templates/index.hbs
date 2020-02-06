@@ -1,0 +1,41 @@
+{{!-- Basic stats --}}
+<section>
+  <div class="row text-center">
+    <div class="col-md-4 text-warning my-3">
+      <h4>Infected</h4>
+      <p class="display-4">
+        {{numeral @model.confirmed}}
+      </p>
+    </div>
+    <div class="col-md-4 text-success my-3">
+      <h4>Recovered</h4>
+      <p class="display-4">
+        {{numeral @model.recovered}}
+      </p>
+    </div>
+    <div class="col-md-4 text-danger my-3">
+      <h4>Deaths</h4>
+      <p class="display-4">
+        {{numeral @model.deaths}}
+      </p>
+    </div>
+  </div>
+</section>
+
+{{!-- The map visualization --}}
+<section>
+  <Map />
+</section>
+
+{{!--
+<section>
+  <h3>What is a coronavirus?</h3>
+  <blockquote>
+    Coronaviruses (CoV) are a large family of viruses that cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome
+    (MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV). A novel coronavirus (nCoV) is a new strain that has not been previously identified in humans.
+  </blockquote>
+  <p>
+    For details on how to protect yourself, see <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public">W.H.O.'s Advice for public</a>.
+  </p>
+</section>
+--}}
