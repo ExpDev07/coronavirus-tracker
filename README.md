@@ -1,6 +1,6 @@
 # coronavirus-tracker
 
-> 🦠 A live tracker and visualization of the coronavirus (2019-nCoV). This is the website, which is a SPA using EmberJS.
+> 🦠 A live tracker and visualization of the coronavirus (2019-nCoV). This is the website, which is a SPA using 🐻 EmberJS.
 
 ## Live version
 View the live version here: [https://expdev07.github.io/coronavirus-tracker](https://expdev07.github.io/coronavirus-tracker).
