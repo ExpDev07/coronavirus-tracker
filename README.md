@@ -5,7 +5,12 @@
 [![Build Status](https://travis-ci.com/ExpDev07/coronavirus-tracker.svg?branch=master)](https://travis-ci.com/ExpDev07/coronavirus-tracker)
 
 ## Live version
+
 View the live version here: [https://expdev07.github.io/coronavirus-tracker](https://expdev07.github.io/coronavirus-tracker).
+
+## API
+
+The API used for collecting data can be found here: [https://github.com/ExpDev07/coronavirus-tracker-api](https://github.com/ExpDev07/coronavirus-tracker-api).
 
 ## Prerequisites
 
