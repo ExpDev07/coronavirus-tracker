@@ -59,7 +59,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "ember-cli-sass": "^10.0.1",
-    "numeral": "^2.0.6",
-    "ol": "^6.1.1"
+    "leaflet": "^1.6.0",
+    "numeral": "^2.0.6"
   }
 }

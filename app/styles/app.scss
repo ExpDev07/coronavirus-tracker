@@ -1,9 +1,10 @@
-@import 'layout';
-@import 'map';
-
 // Bootstrap 4 and overriding variables.
 @import 'variables';
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+// Custom
+@import 'layout';
+@import 'map';
 
 * {
   box-sizing: border-box;
