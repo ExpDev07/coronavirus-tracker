@@ -9,3 +9,16 @@
   // General styling.
   background-color: lighten($body-bg, 0);
 }
+
+// Leaflet.
+.leaflet {
+
+  // Tooltips.
+  &-tooltip {
+    background-color: $dark;
+    color: $white;
+    border: none;
+    padding: 1em;
+  }
+
+}

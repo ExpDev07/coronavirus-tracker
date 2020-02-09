@@ -1,6 +1,27 @@
 import { action } from '@ember/object';
 import Component from '@glimmer/component';
-import { Map, TileLayer } from 'leaflet'
+import { Map, TileLayer, Circle } from 'leaflet'
+
+/**
+ * Calculates a radius based on the amount of cases.
+ *
+ * @param {number} cases The amount of cases.
+ * @param {number} multiplier Amount to multiply cases with.
+ * @param {number} min Minimum radius.
+ * @param {number} max Maximum radius.
+ */
+function calculateRadius(cases, multiplier, min, max) {
+
+  // Calculate radius.
+  const radius = cases * multiplier;
+
+  // Check for min and max.
+  if (radius < min) return min;
+  if (radius > max) return max;
+
+  // Return radius.
+  return radius;
+}
 
 export default class MapComponent extends Component {
 
@@ -20,9 +41,6 @@ export default class MapComponent extends Component {
     // Reset HTML.
     element.innerHTML = '';
 
-    // Dark mode map layer.
-    const layer = new TileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png');
-
     // Create the map and target element.
     const map = new Map(element, {
       // Center point.
@@ -34,7 +52,9 @@ export default class MapComponent extends Component {
       minZoom: 3,
 
       // Starting layers.
-      layers: [ layer ],
+      layers: [
+        new TileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'),
+      ],
 
       // No visible controls.
       attributionControl: false,
@@ -47,6 +67,35 @@ export default class MapComponent extends Component {
         [ -66.485229, 513.380405 ]
       ]*/
     });
+
+    // Draw circles at coordinates.
+    for (const location of this.data) {
+
+      const { coordinates, country, province, confirmed } = location;
+
+      // Make sure there's coordinates.
+      if (!coordinates) continue;
+
+      // Create marker.
+      const marker = new Circle([location.coordinates.latitude, location.coordinates.longitude], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: calculateRadius(confirmed, 25, 15000, 500000),
+      });
+
+      // Bind a tooltip for info.
+      marker.bindTooltip(
+        `
+        <h6><b>${province || country}</b></h6>
+
+        `
+      );
+
+      // Add marker to map.
+      map.addLayer(marker);
+
+    }
 
     // Fly to China (point of interest)!
     map.flyTo([ 35.0000, 103.0000 ]);
