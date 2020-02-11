@@ -11,7 +11,6 @@ import { Map, TileLayer, Circle } from 'leaflet'
  * @param {number} max Maximum radius.
  */
 function calculateRadius(cases, multiplier, min, max) {
-
   // Calculate radius.
   const radius = cases * multiplier;
 
