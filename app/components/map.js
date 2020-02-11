@@ -29,7 +29,7 @@ export default class MapComponent extends Component {
    * Gets the data.
    */
   get data() {
-   return this.args.data || [];
+    return this.args.data || [];
   }
 
   /**
@@ -71,17 +71,18 @@ export default class MapComponent extends Component {
     // Draw circles at coordinates.
     for (const location of this.data) {
 
-      const { coordinates, country, province, confirmed } = location;
+      // Extract data from location.
+      const { coordinates, country, province, latest } = location;
 
       // Make sure there's coordinates.
       if (!coordinates) continue;
 
       // Create marker.
-      const marker = new Circle([location.coordinates.latitude, location.coordinates.longitude], {
+      const marker = new Circle([ coordinates.lat, coordinates.long ], {
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.5,
-        radius: calculateRadius(confirmed, 25, 15000, 500000),
+        radius: calculateRadius(latest, 25, 15000, 500000),
       });
 
       // Bind a tooltip for info.

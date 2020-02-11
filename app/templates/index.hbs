@@ -5,19 +5,19 @@
       <div class="col-md-4 text-warning my-3">
         <h4>Infected</h4>
         <p class="display-4">
-          {{numeral @model.confirmed}}
+          {{numeral @model.latest.confirmed}}
         </p>
       </div>
       <div class="col-md-4 text-success my-3">
         <h4>Recovered</h4>
         <p class="display-4">
-          {{numeral @model.recovered}}
+          {{numeral @model.latest.recovered}}
         </p>
       </div>
       <div class="col-md-4 text-danger my-3">
         <h4>Deaths</h4>
         <p class="display-4">
-          {{numeral @model.deaths}}
+          {{numeral @model.latest.deaths}}
         </p>
       </div>
     </div>
@@ -26,7 +26,7 @@
 
 {{!-- The map visualization --}}
 <section>
-  <Map @data={{@model.locations}} />
+  <Map @data={{@model.confirmed.locations}} />
 </section>
 
 {{!--
